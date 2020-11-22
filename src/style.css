@@ -1,3 +1,140 @@
-h1 {
-    color: #343434;
-}
+.container {
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  body {
+      font-family: 'Mukta', sans-serif; 
+      padding-top: 20px; 0; 0
+    }
+    .card-body{
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      border-radius: 8px;
+    }
+    form {
+    margin-top:-10px;
+    }
+    h1 #search-input {
+      margin-top:10px
+    }
+    .details {
+      position: relative;
+      text-align: left;
+      margin: 0;
+      top: 40px;
+    }
+    .cityName {
+    font-size: 55px;
+    text-align: center;
+    color: #30475e;
+    margin-top:-30px;
+    }
+    .day {
+    font-size: 18px;  
+    text-align: center;
+    color: #52575d;
+    }
+    .description {
+    font-size: 14px;
+    text-align:center;
+    color: #52575d;
+    margin-top:0px;
+    }
+    .pressure {
+    font-size: 15px;
+    margin-left: 0px;
+    color: #838383;
+    margin-top: 172px
+    }
+    .humidity {
+    font-size: 15px;
+    text-align:center;
+    margin-top: -18px;
+    color: #838383;
+    }
+    .wind {
+    font-size: 15px;
+    margin-left:320px;
+    color: #838383;
+    margin-top:-18px
+    }
+    h3 {
+      text-align:center;
+      font-size: 80px;
+      position:relative;
+      top:-145px;
+      color: #30475e;
+    }
+    .emoji-description {
+      font-size: 55px;
+    }
+    .unit {
+      font-size: 13px;
+      position: relative;
+      top: -25px;
+      margin-left:0px;
+      color: #4b5d67;
+    }
+    h4 {
+      text-align: center;
+      position:relative;
+      top: -130px;
+      font-size: 13px;
+      color:#f7f2e7;
+    }
+    h4 .timeOfTheDay{
+      color: #41444b;
+    }
+    main-two {
+      width: 100%;
+     text-align:center;
+      font-size: 14.5px;  
+      color:#41444b;
+    }
+    .monday {
+      position: relative;
+      top: -120px;
+      left: -15px;
+    }
+    .tuesday {
+      position: relative;
+      top: -220px;
+      left: 80px;
+    }
+    .wednesday {
+      position: relative;
+      top: -370px;
+      margin-left:175px
+    }
+    .thursday {
+      position: relative;
+      top: -485px;
+      left: 270px;
+    }
+    .friday {
+      position: relative;
+      top: -630px;
+      left: 365px;
+    }
+    body p .fas{
+      font-size: 45px;
+      color: #f7f2e7;
+    }
+    footer {
+      position: relative;
+      text-align: center;
+      top: -570px;
+      left: 20px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    h4 .card .card-body{
+      background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+    }
+    main-two .card .card-body {
+      background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    }
+    body {
+      max-width:100%
+    }
