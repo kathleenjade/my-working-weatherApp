@@ -14,174 +14,118 @@
       src="https://kit.fontawesome.com/70ab98db76.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300&family=Mukta:wght@300&family=Staatliches&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Indie+Flower&family=Mukta:wght@300&family=Texturina:wght@200&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="src/style.css" />
     <title>WeatherApp</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card" style="width: 30rem; height: 42rem;">
-        <div class="card-body">
-          <header class="search">
+    <div class="container">  
+      <header class="search">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-5">
+              <input type="search" 
+                      placeholder="Type a city name.." 
+                      id="search-input"
+                      class="form-control rounded-input"
+                      autocomplete="off"/>
+            </div>
+            <div class="col-1">
+              <button class="form-control btn btn-light" id="submit-input">
+               <i class="fas fa-search"></i></button>
+            </div>
+        </form>
+              <button class="btn btn-light" id="submit-current">
+               <i class="fas fa-map-marker-alt"></i></button>     
+      </header>
             <h1>
-						<form id="search-form">
-						<div class="row">
-							<div class="col-6">
-							<input type="search" 
-										 placeholder="Type a city name.." 
-										 id="search-input"
-									   class="form-control"
-										 />
-							</div>
-							<div class="col-3">
-							<input type="submit" 
-										 value="Search" 
-										 id="submit-input"
-										 class="form-control btn btn-light"
-										 />
-            </div>
-            <div class="col-3">
-                <input type="submit" 
-                       value="Current Loc" 
-                       id="submit-current"
-                       class="form-control btn btn-light w-100"å
-                       />
-					</div>
-						</form>
+                <span class="details">
+                  <div class="cityName"></div>
+                  <div class="day"></div>
+                  <div class="description">()</div>
+                </span>
+                <span  class = "emoji">
+                  <i class="fas fa-cloud-rain"></i> </span>
+                  <div class="emoji-description">
+                   <span class="temperatureToday"> 18 </span>  
+                   <span class="unit">
+                   <a href="#" id ="celsius"> °C </a href> | <a href="#" id ="fahrenheit"> °F </a href></span>
             </h1>
-          </header>
-          <section class="details">
+      <main>
             <h2>
-              <div class="cityName"></div>
-              <div class="day"></div>
-              <div class="description">()</div>
-              <div class="pressure">Pressure: %</div>
-              <div class="humidity">Humidity: %</div>
-              <div class="wind">Wind: m/s</div>
-            </h2>
-          </section>
-          <main>
-            <h3><span  class = "emoji">
-              <i class="fas fa-cloud-rain"></i> </span>
-              <div class="emoji-description">
-                <span class="temperatureToday"> 18 </span>  
-                <span class="unit">
-                    <a href="#" id ="celsius"> °C </a href> | <a href="#" id ="fahrenheit"> °F </a href>
-									</span>
-								</div>
-            </h3>
-            <h4>
-              <div class="card" style="width: 28rem; height: 4rem;">
-                <div class="card-body" class="width:" 28>
-                  <div class="row">
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud"></i> | 18°
-                      <div class="timeOfTheDay">
-                        9am
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud-sun"></i> | 19°
-                      <div class="timeOfTheDay">12pm</div>
-                    </div>
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud"></i> | 17°
-                      <div class="timeOfTheDay">3pm</div>
-                    </div>
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud"></i> | 17°
-                      <div class="timeOfTheDay">
-                        6pm
-                      </div>
-                    </div>
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud-moon"></i> | 15°
-                      <div class="timeOfTheDay">9pm</div>
-                    </div>
-                    <div class="col-sm-2">
-                      <i class="fas fa-cloud-rain"></i> | 13°
-                      <div class="timeOfTheDay">12mn</div>
-                    </div>
+                <span class="information">
+                  <div class="feelsLike">Feels Like: °C</div>
+                  <div class="humidity">Humidity: %</div>
+                   <div class="pressure">Pressure: %</div>
+                   <div class="wind">Wind: m/s</div>
                   </div>
-                </div>
+                </span>
+            </h2>
+            <h3>
+              <div class="row">
+                  <div class="col-sm-2">
+                    <i class="fas fa-cloud"></i> | 18°
+                    <div class="timeOfTheDay">9am</div>
+                  </div>
+                  <div class="col-sm-2">
+                     <i class="fas fa-cloud-sun"></i> | 19°
+                     <div class="timeOfTheDay">12pm</div>
+                  </div>
+                  <div class="col-sm-2">
+                     <i class="fas fa-cloud"></i> | 17°                   
+                     <div class="timeOfTheDay">3pm</div>
+                  </div>               
+                  <div class="col-sm-2">
+                     <i class="fas fa-cloud"></i> | 17°
+                     <div class="timeOfTheDay">6pm</div>
+                  </div>
+                  <div class="col-sm-2">
+                     <i class="fas fa-cloud-moon"></i> | 15°
+                     <div class="timeOfTheDay">9pm</div>
+                  </div>
+                  <div class="col-sm-2">
+                     <i class="fas fa-cloud-rain"></i> | 13°
+                     <div class="timeOfTheDay">12mn</div>
+                  </div>
               </div>
-            </h4>
-          </main>
-          <main-two>
-            <div class="monday">
-              <div class="card" style="width: 5.5rem; height: 8rem;">
-                <div class="card-body">
-									Mon
-                  <p>
-                    <i class="fas fa-cloud-sun"></i>
-										<br />
-                    22° | 8°
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="tuesday">
-              <div class="card" style="width: 5.5rem; height: 8rem;">
-                <div class="card-body">
-                  Tue
-
-                  <p>
-                    <i class="fas fa-sun"></i>
-                    22° | 9°
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="wednesday">
-              <div class="card" style="width: 5.5rem; height: 8rem;">
-                <div class="card-body">
-                  Wed
-
-                  <p>
-                    <i class="fas fa-cloud-sun"></i>
-                    22° | 11°
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="thursday">
-              <div class="card" style="width: 5.5rem; height: 8rem;">
-                <div class="card-body">
-                  Thu
-
-                  <p>
-                    <i class="fas fa-cloud"></i>
-                    21° | 11°
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="friday">
-              <div class="card" style="width: 5.5rem; height: 8rem;">
-                <div class="card-body">
-                  Fri
-
-                  <p>
-                    <i class="fas fa-cloud-showers-heavy"></i>
-                    21° | 9°
-                  </p>
-                </div>
-              </div>
-            </div>
-          </main-two>
-          <footer>
-            <h5>
-                <a href="https://github.com/kathleenjade/first-ever-coding-project" target="_blank">
-                Open-source code
-                </a>
-                by Kath Escote
-            </h5>
-          </footer>
+            </h3>
+      </main>
+      <section>
+        <div class="monday">
+                Mon
+            <p> <i class="fas fa-cloud-sun"></i>
+            <br /> 22° | 8° </p>
         </div>
-      </div>
+        <div class="tuesday">
+                Tue
+            <p> <i class="fas fa-sun"></i>
+            <br /> 22° | 9° </p>
+        </div>
+        <div class="wednesday">
+                 Wed
+            <p> <i class="fas fa-cloud-sun"></i>
+            <br />    22° | 11° </p>
+        </div>
+        <div class="thursday">
+                 Thu
+        <p> <i class="fas fa-cloud"></i>
+        <br />    21° | 11° </p>
+        </div>
+        <div class="friday">
+                 Fri
+        <p> <i class="fas fa-cloud-showers-heavy"></i>
+        <br />    21° | 9° </p>
+        </div>
+      </section>
+        <footer>
+           <h4>
+              <a href="https://github.com/kathleenjade/first-ever-coding-project" target="_blank">
+                 Open-source code
+              </a>
+                 by Kath Escote
+           </h4>
+        </footer>
     </div>
     <script src="src/index.js"></script>
   </body>
