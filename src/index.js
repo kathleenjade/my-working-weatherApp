@@ -47,6 +47,7 @@ let humidity = document.querySelector("h2 #humidity");
 let pressure = document.querySelector("h2 #pressure");
 let wind = document.querySelector("h2 #wind");
 let dateElement = document.querySelector("h1 .day");
+let iconElement = document.querySelector("h1 #icon")
 
 
 temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -57,6 +58,7 @@ humidity.innerHTML = response.data.main.humidity;
 pressure.innerHTML = response.data.main.pressure;
 wind.innerHTML = response.data.wind.speed;
 dateElement.innerHTML = formatDate (response.data.dt * 1000);
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 
 
 
