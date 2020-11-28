@@ -1,5 +1,5 @@
 let currentDate = new Date();
-let updatedDate = document.querySelector("h2 .day");
+let updatedDate = document.querySelector("h1 .day");
 let days = [
   "SUNDAY",
   "MONDAY",
@@ -35,10 +35,10 @@ let minute = currentDate.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
-updatedDate.innerHTML = `${day}, ${month} ${date} || ${hour}: ${minute}`;
+updatedDate.innerHTML = `${day}  ${month} ${date} , ${hour}: ${minute}`;
 
 function updateResults(response) {
-  document.querySelector("h2 .cityName").innerHTML = response.data.name;
+  document.querySelector("h1 .cityName").innerHTML = response.data.name;
   document.querySelector(".temperatureToday").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -52,9 +52,9 @@ function updateResults(response) {
     "h2 .wind"
   ).innerHTML = `Wind:${response.data.wind.speed}m/s`;
   document.querySelector(
-    "h2 .description"
+    "h1 .description"
   ).innerHTML = `(${response.data.weather[0].description})`;
-  document.querySelector("h3 .emoji").innerHTML = response.data.weather[0].icon;
+  document.querySelector("h2 .emoji").innerHTML = response.data.weather[0].icon;
 }
 
 function search(city) {
@@ -71,7 +71,7 @@ function enterCity(event) {
 
   search(city);
 }
-let searchForm = document.querySelector("h1 #search-form");
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", enterCity);
 search("Barcelona");
 
