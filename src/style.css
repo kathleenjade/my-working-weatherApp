@@ -50,6 +50,7 @@ h1 {
 }
 .emoji {
     font-size: 75px;
+    padding: 0 auto;
 }
 .unit {
     font-size: 12px;

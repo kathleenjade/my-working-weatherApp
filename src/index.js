@@ -60,14 +60,24 @@ wind.innerHTML = response.data.wind.speed;
 dateElement.innerHTML = formatDate (response.data.dt * 1000);
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 
-
-
 }
 
+function search(city) {
+    let units = "metric";
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?q";
+    let apiKey = "01ccbdb64fbdc91284e6a914f1479c4a";
+    let apiUrl = `${apiEndpoint}=${city}&appid=${apiKey}&units=${units}`;
 
-let units = "metric";
-let city = "Barcelona"
-let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?q";
-let apiKey = "01ccbdb64fbdc91284e6a914f1479c4a";
-let apiUrl = `${apiEndpoint}=${city}&appid=${apiKey}&units=${units}`;
-axios.get(apiUrl).then(updateResults);
+    axios.get(apiUrl).then(updateResults);
+}
+
+function enterCity(event) {
+    event.preventDefault();
+    let searchInputElement = document.querySelector("#search-input");
+    search(searchInputElement.value);
+}
+
+search("Barcelona");
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", enterCity);
