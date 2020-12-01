@@ -49,8 +49,9 @@ let wind = document.querySelector("h2 #wind");
 let dateElement = document.querySelector("h1 .day");
 let iconElement = document.querySelector("h1 #icon")
 
+celsiusTemperature = response.data.main.temp;
 
-temperatureElement.innerHTML = Math.round(response.data.main.temp);
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
 cityElement.innerHTML = response.data.name;
 descriptionElement.innerHTML = response.data.weather[0].description;
 feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
@@ -77,11 +78,6 @@ function enterCity(event) {
     search(searchInputElement.value);
 }
 
-search("Barcelona");
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", enterCity);
-
 function showCurrentLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -93,12 +89,43 @@ function showCurrentLocation(position) {
     axios.get(apiUrl).then(updateResults);
 }
 
-
 function getCurrentPosition(event) {
     event.preventDefault();
 
     navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
 
+function displayFahrenheitTemp(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector(".temperatureToday");
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+ 
+function displayCelsiusTemp(event) {
+    event.preventDefault;
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    let temperatureElement = document.querySelector(".temperatureToday");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+}
+
+let celsiusTemperature = null;
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", enterCity);
+
 let currentTempButton = document.querySelector("#submit-current");
 currentTempButton.addEventListener("click", getCurrentPosition)
+ 
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+
+search("Barcelona");
