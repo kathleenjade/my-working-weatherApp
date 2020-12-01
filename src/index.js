@@ -81,3 +81,24 @@ search("Barcelona");
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", enterCity);
+
+function showCurrentLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+    let units = "metric";
+    let apiKey = "01ccbdb64fbdc91284e6a914f1479c4a";
+    let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    
+    axios.get(apiUrl).then(updateResults);
+}
+
+
+function getCurrentPosition(event) {
+    event.preventDefault();
+
+    navigator.geolocation.getCurrentPosition(showCurrentLocation);
+}
+
+let currentTempButton = document.querySelector("#submit-current");
+currentTempButton.addEventListener("click", getCurrentPosition)
