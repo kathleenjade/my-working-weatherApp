@@ -28,7 +28,7 @@ h1 .active:hover {
       border: 1px solid #dbd9d9;
       border-radius: 15px;
       background-image: url("image/weather.png");
-      background-size: 860px 700px;
+      
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
