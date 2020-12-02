@@ -6,10 +6,14 @@ body {
     }
 
 h1 {
-        text-align: center;
+        text-align: left;
         font-family: 'Texturina', serif;
     }
 
+h1 .center {
+    text-align: center;
+}
+    
 h1 .active {
         color: #22262A;
         cursor: default;
@@ -24,8 +28,10 @@ h1 .active:hover {
       border: 1px solid #dbd9d9;
       border-radius: 15px;
       background-image: url("image/weather.png");
+      background-size: 860px 700px;
       background-repeat: no-repeat;
-      background-size: 900px, 400px;
+      background-attachment: fixed;
+      background-position: center;
     }
 
 .search {
@@ -52,32 +58,52 @@ h1 .active:hover {
 }
 
 .cityName {
-    font-size: 50px;
+    font-size: 55px;
+    margin-bottom: 5px;
+    margin-left: 20px;
 }
 .day {
-    font-size: 20px;
+    font-size: 15px;
+    margin-left: 25px;
 }
+
+.temperatureToday {
+    font-size: 80px;
+    margin-left:30px;
+}
+
+.unit {
+    font-size: 14px;
+    text-transform: bold;
+    position: relative;
+    top: -87px;
+    left: 115px;
+}
+
+.emoji {
+    font-size: 90px;
+    padding: 0 auto;
+}
+
 .description {
-    font-size: 17px; 
+    font-size: 25px; 
 }
 .description:first-letter{
     text-transform: capitalize;
 }
-.emoji {
-    font-size: 90px;
-    padding: 0 auto;
-    text-align: right;
-}
-.unit {
-    font-size: 12px;
-    text-transform: bold;
-    position: relative;
-    top: -14px;
-}
-.information {
+
+.right {
     font-size: 20px;
+    margin-top: 70px;
 }
-h4 {
+.feelsLike .humidity .pressure .wind {
+    text-align: center;
+}
+ h2 {
+    font-size: 16px;
+ }
+
+h3 {
     text-align: center;
     font-size: 14px;
 }

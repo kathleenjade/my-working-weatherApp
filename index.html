@@ -41,81 +41,98 @@
           <i class="fas fa-map-marker-alt"></i></button>     
       </header>
       <h1>
-        <span class="details">
-          <div class="cityName"></div>
-          <div class="day"></div>
-          <div class="description">()</div>
-        </span>
-      </h1>
-      <h2>
        <div class="row">
-            <div class="col-sm-6">
-             <span class="information">
+         <div class="col-4">
+           <div class="left">
+             <div class="cityName"></div>
+              <div class="day"></div>
+               <div class="temperatureToday"></div>
+              <span class="unit">
+              <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>  
+           </div>
+         </div>
+       <div class="col-4">
+           <div class="center">
+            <span  class = "emoji">
+              <img src=""id="icon">
+             </span>
+             <div class="description">()</div>
+           </div>
+       </div>
+        <div class="col-4">
+          <div class="right">
               <div class="feelsLike">Feels Like: <span id="feelsLike"> </span>°C</div>
               <div class="humidity">Humidity: <span id ="humidity"> </span>%</div>
               <div class="pressure">Pressure: <span id="pressure"></span>hPa</div>
               <div class="wind">Wind: <span id="wind"></span>m/s</div>
-            </span>
-           </div>
-        <div class="col-sm-6">
-            <span  class = "emoji">
-             <img src=""id="icon">
-            </span>
-             <span class="temperatureToday"></span>  
-             <span class="unit">
-             <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>
+          </div>
         </div>
-      </div>
-      </h2>
-      <h3>
-        <div class="row">
-          <div class="col-sm-2">
-        <div class="monday">
-          Mon
-      <p> <i class="fas fa-cloud-sun"></i>
-      <br /> 22° | 8° </p>
        </div>
+      </h1>
+      <div class="row weather-forecast">
+        <div class="col-sm-2">
+         <h2>
+               12PM
+         </h2>
+         <i class="fas fa-cloud-sun"></i>
+         <div class="forecast-temperature">
+               22° | 8° 
+         </div>
+        </div>
+      <div class="col-sm-2">
+         <h2>
+               3PM
+         </h2>
+         <i class="fas fa-sun"></i>
+         <div class="forecast-temperature">
+               22° | 9° 
+         </div>
       </div>
       <div class="col-sm-2">
-      <span class="tuesday">
-          Tue
-      <p> <i class="fas fa-sun"></i>
-      <br /> 22° | 9° </p>
-      </span> </div>
+         <h2>
+               6PM
+         </h2>
+         <i class="fas fa-cloud-sun"></i>
+         <div class="forecast-temperature">
+        22° | 11° 
+         </div>
+      </div>
       <div class="col-sm-2">
-      <span class="wednesday">
-           Wed
-      <p> <i class="fas fa-cloud-sun"></i>
-      <br />    22° | 11° </p>
-      </span> </div>
+         <h2>
+               9PM
+         </h2>
+         <i class="fas fa-cloud"></i>
+         <div class="forecast-temperature">
+         21° | 11°
+         </div>
+      </div>
       <div class="col-sm-2">
-      <span class="thursday">
-           Thu
-      <p> <i class="fas fa-cloud"></i>
-      <br />    21° | 11° </p>
-      </span> </div>
+         <h2>
+               12AM
+         </h2>
+         <i class="fas fa-cloud-showers-heavy"></i>
+         <div class="forecast-temperature">
+         21° | 9° 
+         </div>
+      </div>
       <div class="col-sm-2">
-      <span class="friday">
-           Fri
-      <p> <i class="fas fa-cloud-showers-heavy"></i>
-      <br />    21° | 9° </p>
-      </span> </div>
-      <div class="col-sm-2">
-      <span class="tuesday">
-          Sat
-      <p> <i class="fas fa-sun"></i>
-      <br /> 22° | 9° </p>
-      </span> </div>
-    </div>
-      </h3>
+         <h2>
+               3AM
+         </h2>
+         <i class="fas fa-sun"></i>
+         <div class="forecast-temperature">
+         22° | 9° 
+         </div>
+        </div>
+     </div>
     </div>
     <footer>
-      <h4>
+      <h3>
          <a href="https://github.com/kathleenjade/my-working-weatherApp" target="_blank">
             Open-source code
          </a>
             by Kath Escote
-      </h4>
+      </h3>
    </footer>
     <script src="src/index.js"></script>
   </body>
