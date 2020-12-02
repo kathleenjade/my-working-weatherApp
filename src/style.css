@@ -66,6 +66,7 @@ h1 .active:hover {
 .emoji {
     font-size: 90px;
     padding: 0 auto;
+    text-align: right;
 }
 .unit {
     font-size: 12px;

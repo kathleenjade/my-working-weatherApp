@@ -34,7 +34,7 @@ function formatDate(timestamp){
       ];
       let month = months[currentDate.getMonth()];
       let date = currentDate.getDate();
-      return `${day} ${month}${date}, ${hour}: ${minute}`
+      return `${day} ${month} ${date}, ${hour}: ${minute}`
 }
 
 function updateResults (response){
@@ -47,7 +47,7 @@ let humidity = document.querySelector("h2 #humidity");
 let pressure = document.querySelector("h2 #pressure");
 let wind = document.querySelector("h2 #wind");
 let dateElement = document.querySelector("h1 .day");
-let iconElement = document.querySelector("h1 #icon")
+let iconElement = document.querySelector("h2 #icon")
 
 celsiusTemperature = response.data.main.temp;
 
