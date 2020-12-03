@@ -3,7 +3,7 @@ body {
     font-family: 'Texturina', serif;
     padding-top: 30px; 
     padding-bottom: 30px;
-    width: 60%;
+    width: 750px;
     display: block;
     margin: 0 auto;
     }
@@ -27,7 +27,7 @@ h1 .active:hover {
     }
 
 .container {
-    max-width: 1000px;
+    max-width: 100%;
     text-align: center;
     border: 1px solid #dbd9d9;
     border-radius: 15px;
