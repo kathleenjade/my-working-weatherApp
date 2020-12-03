@@ -27,8 +27,8 @@ h1 .active:hover {
     }
 
 .container {
-    width: 100vmin;
-    height: 80vmin;
+    min-height: 650px;
+    max-width: 90%;
     text-align: center;
     border: 1px solid #dbd9d9;
     border-radius: 15px;
