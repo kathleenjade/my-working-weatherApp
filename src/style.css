@@ -36,6 +36,11 @@ h1 .active:hover {
     background-attachment: fixed;
     background-position: center;
     background-size: 860px 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    overflow: hidden;
     
     }
 
