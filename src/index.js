@@ -1,13 +1,6 @@
 function formatDate(timestamp){
     let currentDate = new Date(timestamp);
-    let hour = currentDate.getHours();
-    if (hour < 10) {
-        hour = `0${hour}`;
-      }
-    let minute = currentDate.getMinutes();
-    if (minute < 10) {
-        minute = `0${minute}`;
-      }
+
     let days = [
         "SUNDAY",
         "MONDAY",
@@ -34,8 +27,22 @@ function formatDate(timestamp){
       ];
       let month = months[currentDate.getMonth()];
       let date = currentDate.getDate();
-      return `${day} ${month} ${date}, ${hour}: ${minute}`
+      return `${day} ${month} ${date}, ${formatHours(timestamp)}`
 }
+
+function formatHours(timestamp) {
+    let currentDate = new Date(timestamp);
+    let hour = currentDate.getHours();
+    if (hour < 10) {
+        hour = `0${hour}`;
+      }
+    let minute = currentDate.getMinutes();
+    if (minute < 10) {
+        minute = `0${minute}`;
+      }
+    return `${hour}:${minute}`;
+}
+
 
 function updateResults (response){
 let temperatureElement = document.querySelector(".temperatureToday");
@@ -63,7 +70,25 @@ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.dat
 }
 
 function displayForecast(response) {
-    console.log(response.data)
+    let forecastElement = document.querySelector(".weather-forecast");
+    forecastElement.innerHTML = null;
+    let forecast = null;
+    
+    for (let index = 0; index < 6; index++) {
+        forecast = response.data.list[index];
+        forecastElement.innerHTML += `
+    <div class="col-sm-2">
+         <h2>
+               ${formatHours(forecast.dt * 1000)}
+         </h2>
+         <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
+         id="forecastIcon">
+         <div class="forecast-temperature">
+               ${Math.round(forecast.main.temp_max)}° | ${Math.round(forecast.main.temp_min)}° 
+         </div>
+        </div>`
+        ;
+    }  
 }
 
 function search(city) {
