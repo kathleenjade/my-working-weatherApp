@@ -45,28 +45,28 @@ function formatHours(timestamp) {
 
 
 function updateResults (response){
-let temperatureElement = document.querySelector(".temperatureToday");
-let cityElement = document.querySelector("h1 .cityName");
-let descriptionElement = document.querySelector ("h1 .description");
-let feelsLikeElement = document.querySelector("h1 #feelsLike")
-let humidity = document.querySelector("h1 #humidity");
-let pressure = document.querySelector("h1 #pressure");
-let wind = document.querySelector("h1 #wind");
-let dateElement = document.querySelector("h1 .day");
 let iconElement = document.querySelector("h1 #icon")
+let cityElement = document.querySelector("h1 .cityName");
+let dateElement = document.querySelector("h1 .day");
+let temperatureElement = document.querySelector(".temperatureToday");
+let descriptionElement = document.querySelector ("h2 .description");
+let feelsLikeElement = document.querySelector("h2 #feelsLike")
+let humidity = document.querySelector("h2 #humidity");
+let pressure = document.querySelector("h2 #pressure");
+let wind = document.querySelector("h2 #wind");
+
 
 celsiusTemperature = response.data.main.temp;
 
-temperatureElement.innerHTML = Math.round(celsiusTemperature);
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 cityElement.innerHTML = response.data.name;
+dateElement.innerHTML = formatDate (response.data.dt * 1000);
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
 descriptionElement.innerHTML = response.data.weather[0].description;
 feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
 humidity.innerHTML = response.data.main.humidity;
 pressure.innerHTML = response.data.main.pressure;
 wind.innerHTML = response.data.wind.speed;
-dateElement.innerHTML = formatDate (response.data.dt * 1000);
-iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
-
 }
 
 function displayForecast(response) {
@@ -78,11 +78,11 @@ function displayForecast(response) {
         forecast = response.data.list[index];
         forecastElement.innerHTML += `
     <div class="col-sm-2">
-         <h2> 
+         <h3> 
          <div class="forecastHours">
                ${formatHours(forecast.dt * 1000)}
          </div>
-         </h2>
+         </h3>
          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
          id="forecastIcon">
          <span class="forecast-temperature-max">

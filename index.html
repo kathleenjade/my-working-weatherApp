@@ -25,14 +25,14 @@
         <header class="search">
           <form id="search-form">
             <div class="row">
-              <div class="col-5">
+              <div class="col-6">
                 <input type="search" 
                         placeholder="Type a city name.." 
                         id="search-input"
                         class="form-control rounded-input"
                         autocomplete="off"/>
                       </div> 
-                      <div class="col-1.">
+                      <div class="col-1.1">
                         <button class="form-control btn btn-light" id="submit-input">
                          <i class="fas fa-search"></i></button>
                       </div>
@@ -41,45 +41,74 @@
           <button class="btn btn-light" id="submit-current">
             <i class="fas fa-map-marker-alt"></i></button>     
         </header>
-        <h1>
-          <div class="row">
-            <div class="col-6">
-              <div class="left">
-                <div class="cityName"></div>
-                <div class="day"></div>
-                <span  class = "emoji">
-                  <img src=""id="icon">
-                 </span>
-                 <div class="temperatureToday"></div>
-                 <span class="unit">
-                 <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>  
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="right">
-                <div class="description">()</div>
-                <div class="feelsLike">Feels Like: <span id="feelsLike"> </span><span class="value">°C</span></div>
-                 <div class="humidity">Humidity: <span id ="humidity"> </span><span class="value">%</span></div>
-                 <div class="pressure">Pressure: <span id="pressure"></span><span class="value">hPa</span></div>
-                 <div class="wind">Wind: <span id="wind"></span><span class="value">m/s</span></div>
-              </div>
+      <h1>
+      <div class="center">
+        <span  class = "emoji">
+          <img src=""id="icon">
+         </span>
+         <div class="cityName"></div>
+        <div class="day"></div>
+      </div>
+      </h1>
+      <h2>
+        <div class="row">
+          <div class="col-6">
+            <div class="left">
+               <div class="temperatureToday"></div>
+               <span class="unit">
+               <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>  
             </div>
           </div>
-        </h1>
+          <div class="col-6">
+            <div class="right">
+              <div class="description">()</div>
+              <div class="feelsLike">Feels Like: <span id="feelsLike"> </span><span class="value">°C</span></div>
+               <div class="humidity">Humidity: <span id ="humidity"> </span><span class="value">%</span></div>
+               <div class="pressure">Pressure: <span id="pressure"></span><span class="value">hPa</span></div>
+               <div class="wind">Wind: <span id="wind"></span><span class="value">m/s</span></div>
+            </div>
+          </div>
+        </div>
+      </h2>
+      <h3>
         <div class= "transparent-box" id="forecast">
           <div class="row weather-forecast"></div>
         </div>
-      </div>
+      </h3>
     </div>
-        <footer>
-          <h2>
-             <a href="https://github.com/kathleenjade/my-working-weatherApp" target="_blank">
-                Open-source code
-             </a>
-                by Kath Escote
-          </h2>
-       </footer>
-       <script src="src/index.js"></script>
-      </body>
-    </html>
-      
+  </div>
+      <footer>
+        <h4>
+           <a href="https://github.com/kathleenjade/my-working-weatherApp" target="_blank">
+              Open-source code
+           </a>
+              by Kath Escote
+        </h4>
+     </footer>
+     <script src="src/index.js"></script>
+    </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

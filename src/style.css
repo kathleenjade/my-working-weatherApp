@@ -22,17 +22,13 @@ h1 .active:hover {
     background-attachment: scroll;
     background-position: center;
     background-size: 840px 700px;
-    padding: 20px 20px;
 }
 .search {
-    padding:8px 5px 5px 5px;
+    padding:15px 5px 5px 10px;
     border-radius: 40px;
     display: block;
     margin: auto;
     text-align: center;
-}
-.search #search-input {
-    border-radius: 40px;
 }
 .search #submit-input {
     border-radius: 20px;
@@ -41,60 +37,52 @@ h1 .active:hover {
 .search #submit-current {
     border-radius: 20px;
     background-color: #83c0c4;
-    width: 5%;
     position: relative;
     top: -38px;
-    left: 15px;
+    left: 70px;
 }
-.left {
-    text-align: left;
-    position: relative;
-    top: 50px;
+.center {
+    text-align: center;
+}
+.emoji {
+    font-size: 10px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 0 0;
 }
 .cityName {
     font-size: 65px;
     margin-bottom: 0px;
-    margin-left: 20px;
     color: #534e52;
-    position: relative;
-    top: -60px;
+    margin-top: -10px;
 }
 .day {
     font-size: 17px;
-    margin-left: 25px;
     color: #534e52;
-    position: relative;
-    top: -60px;
 }
-.emoji {
-    font-size: 90px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    top: -90px;
-    left: 185px;
+.left {
+    text-align: left;
 }
 .temperatureToday {
     font-size: 90px;
     color: #534e52;
     text-align: center;
-    position: relative;
-    top: -130px;
-    left: 70px;
+    margin-left: 40px;
+    margin-top: -10px;
 }
 .unit {
     font-size: 15px;
     text-transform: bold;
     position: relative;
-    top: -220px;
-    left: 290px;
+    top: -85px;
+    left: 260px;
 }
 .right {
-    margin-top: 185px;
-    margin-left: 80px;
     font-size: 16px;
     color: #534e52;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 .description {
     font-size: 22px; 
@@ -103,14 +91,9 @@ h1 .active:hover {
 .description:first-letter{
     text-transform: capitalize;
 }
-h2 {
-    text-align: center;
-    font-size: 14px;
- }
  .transparent-box {
-    margin-top: -40px;
     border: 1px solid #cbdcdc;
-    background: rgba(208, 232, 232, 0.4);
+    background: rgba(178, 198, 198, 0.4);
  }
 .weatherForecast {
     width: 100%;
@@ -129,7 +112,10 @@ h2 {
 .forecast-temperature-min {
     color: #2e4949;
 }
-
+h4 {
+    text-align: center;
+    font-size: 14px;
+ }
 
 
 
