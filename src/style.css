@@ -21,7 +21,7 @@ h1 .active:hover {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
-    background-size: 840px 700px;
+    background-size: 100%;
 }
 .search {
     padding:15px 5px 5px 10px;
