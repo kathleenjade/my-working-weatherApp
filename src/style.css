@@ -60,6 +60,9 @@ h1 .active:hover {
     font-size: 17px;
     color: #534e52;
 }
+.my-row {
+    height: 230px;
+}
 .left {
     text-align: left;
 }
