@@ -70,8 +70,8 @@ h1 .active:hover {
     font-size: 15px;
     text-transform: bold;
     position: relative;
-    top: -80px;
-    left: 235px;
+    float:right;
+    top: -60px;
 }
 .right {
     font-size: 16px;
