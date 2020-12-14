@@ -45,15 +45,15 @@ function formatHours(timestamp) {
 
 
 function updateResults (response){
-let iconElement = document.querySelector("h1 #icon")
-let cityElement = document.querySelector("h1 .cityName");
-let dateElement = document.querySelector("h1 .day");
+let iconElement = document.querySelector("#icon")
+let cityElement = document.querySelector(".cityName");
+let dateElement = document.querySelector(".day");
 let temperatureElement = document.querySelector(".temperatureToday");
-let descriptionElement = document.querySelector ("h2 .description");
-let feelsLikeElement = document.querySelector("h2 #feelsLike")
-let humidity = document.querySelector("h2 #humidity");
-let pressure = document.querySelector("h2 #pressure");
-let wind = document.querySelector("h2 #wind");
+let descriptionElement = document.querySelector (".description");
+let feelsLikeElement = document.querySelector("#feelsLike")
+let humidity = document.querySelector("#humidity");
+let pressure = document.querySelector("#pressure");
+let wind = document.querySelector("#wind");
 
 
 celsiusTemperature = response.data.main.temp;
@@ -77,7 +77,7 @@ function displayForecast(response) {
     for (let index = 0; index < 6; index++) {
         forecast = response.data.list[index];
         forecastElement.innerHTML += `
-    <div class="col-md-2 col-sm-2">
+    <div class="col-6 col-md-2 text-center">
          <h3> 
          <div class="forecastHours">
                ${formatHours(forecast.dt * 1000)}
@@ -88,8 +88,7 @@ function displayForecast(response) {
          <span class="forecast-temperature-max">
                ${Math.round(forecast.main.temp_max)}° </span> |  <span class="forecast-temperature-min"> ${Math.round(forecast.main.temp_min)}° </span> 
          </div>
-        </div>`
-        ;
+        </div>`;
     }  
 }
 

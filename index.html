@@ -20,80 +20,87 @@
     <title>WeatherApp</title>
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app-wrapper">
-        <header class="search">
-          <form id="search-form">
-            <div class="row">
-              <div class="col-sm-6">
-                <input type="search" 
-                        placeholder="Type a city name.." 
-                        id="search-input"
-                        class="form-control rounded-input"
-                        autocomplete="off"/>
-                      </div> 
-                      <div class="col-sm-1.1">
-                        <button class="form-control btn btn-light" id="submit-input">
-                         <i class="fas fa-search"></i></button>
-                      </div>
+    <div class="container weather-app-wrapper">
+      <div class="row">
+        <div class="col">
+          <header class="search">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-8 col md-6">
+                  <input 
+                  type="search" 
+                  placeholder="Type a city name.." 
+                  id="search-input"
+                  class="form-control rounded-input"
+                  autocomplete="off"/>
+                </div> 
+                <div class="col-2 col-md-1">
+                  <button class="form-control btn btn-light" 
+                          id="submit-input">
+                   <i class="fas fa-search"></i>
+                  </button>
+                </div>
+                <div class="col-2 col-md-1">
+                  <button 
+                  type="button"
+                  class="btn btn-light" 
+                  id="submit-current">
+                    <i class="fas fa-map-marker-alt"></i></button>   
+                </div>
               </div>
-          </form>
-          <button class="btn btn-light" id="submit-current">
-            <i class="fas fa-map-marker-alt"></i></button>     
-        </header>
-      <h1>
-      <div class="center">
-        <span  class = "emoji">
-          <img src=""id="icon">
-         </span>
-         <div class="cityName"></div>
-        <div class="day"></div>
+            </form>
+          </header>
+        </div>
       </div>
-      </h1>
-      <h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="left">
-               <div class="temperatureToday"></div>
-               <span class="unit">
-               <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>  
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="right">
-              <div class="description">()</div>
-              <div class="feelsLike">Feels Like: <span id="feelsLike"> </span><span class="value">°C</span></div>
-               <div class="humidity">Humidity: <span id ="humidity"> </span><span class="value">%</span></div>
-               <div class="pressure">Pressure: <span id="pressure"></span><span class="value">hPa</span></div>
-               <div class="wind">Wind: <span id="wind"></span><span class="value">m/s</span></div>
-            </div>
+      <div class="row">
+        <div class="col">
+          <div class="center">
+            <h1>
+              <span class = "emoji">
+                <img src=""id="icon">
+               </span>
+            </h1>
+               <h1 class="cityName"></h1>
+               <h1 class="day"></h1>
+          </div>      
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <div class="left">
+            <h2>
+              <div class="temperatureToday"></div>
+              <span class="unit">
+                <a href="#" id ="celsius" class="active"> °C </a href> | <a href="#" id ="fahrenheit"> Change to °F </a href></span>  
+            </h2>
           </div>
         </div>
-      </h2>
-      <h3>
-        <div class= "transparent-box" id="forecast">
-          <div class="row weather-forecast"></div>
+        <div class="col-12 col-md-6">     
+          <div class="right text-center">
+            <div class="description">()</div>
+            <div class="feelsLike">Feels Like: <span id="feelsLike"> </span><span class="value">°C</span></div>
+             <div class="humidity">Humidity: <span id ="humidity"> </span><span class="value">%</span></div>
+             <div class="pressure">Pressure: <span id="pressure"></span><span class="value">hPa</span></div>
+             <div class="wind">Wind: <span id="wind"></span><span class="value">m/s</span></div>
+          </div>
         </div>
-      </h3>
+      </div>   
+    <div class= "transparent-box" id="forecast">
+      <div class="row weather-forecast"></div>
+    </div>   
     </div>
-  </div>
-      <footer>
-        <h4>
-           <a href="https://github.com/kathleenjade/my-working-weatherApp" target="_blank">
-              Open-source code
-           </a>
-              by Kath Escote
-        </h4>
-     </footer>
-     <script src="src/index.js"></script>
-    </body>
-  </html>
-
-
-
-
-
-
+    <footer>
+      <h4>
+         <a href="https://github.com/kathleenjade/my-working-weatherApp" target="_blank">
+            Open-source code
+         </a>
+            by Kath Escote
+      </h4>
+   </footer>
+   <script src="src/index.js"></script>
+  </body>
+</html>
+      
 
 
 

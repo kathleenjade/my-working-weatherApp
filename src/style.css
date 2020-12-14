@@ -12,7 +12,6 @@ h1 .active:hover {
     }
 .container {
     width: 768px;
-    display: flex;
     margin: 0 auto;
 }
 .weather-app-wrapper {
@@ -21,7 +20,7 @@ h1 .active:hover {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
 }
 .search {
     padding:15px 5px 5px 10px;
@@ -33,13 +32,12 @@ h1 .active:hover {
 .search #submit-input {
     border-radius: 20px;
     background-color: #BBD4D6;
+    width: auto;
 }
 .search #submit-current {
     border-radius: 20px;
     background-color: #83c0c4;
     position: relative;
-    top: -38px;
-    left: 70px;
 }
 .center {
     text-align: center;
@@ -60,9 +58,6 @@ h1 .active:hover {
     font-size: 17px;
     color: #534e52;
 }
-.my-row {
-    height: 230px;
-}
 .left {
     text-align: left;
 }
@@ -70,22 +65,18 @@ h1 .active:hover {
     font-size: 90px;
     color: #534e52;
     text-align: center;
-    margin-left: 40px;
-    margin-top: -10px;
 }
 .unit {
     font-size: 15px;
     text-transform: bold;
     position: relative;
-    top: -85px;
-    left: 260px;
+    top: -80px;
+    left: 235px;
 }
 .right {
     font-size: 16px;
     color: #534e52;
     text-align: left;
-    margin-left: 40px;
-    margin-top: 20px;
 }
 .description {
     font-size: 22px; 
@@ -101,7 +92,8 @@ h1 .active:hover {
 .weatherForecast {
     max-width: 700px;
 }
-.weather-forecast, .forecastHours{
+.weather-forecast, 
+.forecastHours{
     font-size: 20px;
     text-align: center;
     font-weight: bolder;
@@ -119,7 +111,14 @@ h4 {
     text-align: center;
     font-size: 14px;
  }
-
+#icon {
+    width: 25%;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-bottom: 0 auto;
+}
+@media (min-width: 768px) {
+}
 
 
 
